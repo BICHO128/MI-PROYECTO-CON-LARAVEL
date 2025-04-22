@@ -1,4 +1,4 @@
-// resources/views/productos/create.blade.php
+{{-- // resources/views/productos/create.blade.php --}}
 <!DOCTYPE html>
 <html>
 

@@ -7,6 +7,10 @@
 
 <body>
     <h1>Productos Disponibles</h1>
+
+    {{-- Botón para crear un nuevo producto --}}
+    <a href="{{ route('productos.create') }}">Crear Producto</a>
+
     <table>
         <thead>
             <tr>
@@ -25,10 +29,10 @@
                     <td>${{ $producto->precio }}</td>
                     <td>{{ $producto->stock }}</td>
                     <td>
-                        {{-- // Agregar un botón editar --}}
+                        {{-- Botón editar --}}
                         <button><a href="{{ route('productos.edit', $producto->id) }}">Editar</a></button>
 
-                        {{-- // Agregar un botón eliminar --}}
+                        {{-- Botón eliminar --}}
                         <button><a href="{{ route('productos.destroy', $producto->id) }}">Eliminar</a></button>
                     </td>
                 </tr>

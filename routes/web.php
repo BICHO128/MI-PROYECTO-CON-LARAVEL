@@ -43,3 +43,4 @@ Route::get('/categorias/{id}', [CategoriaController::class, 'show'])->name('cate
 Route::get('/categorias/{id}/edit', [CategoriaController::class, 'edit'])->name('categorias.edit');
 Route::patch('/categorias/{id}', [CategoriaController::class, 'update'])->name('categorias.update');
 Route::delete('/categorias/{id}', [CategoriaController::class, 'destroy'])->name('categorias.destroy');
+
