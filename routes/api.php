@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiCategoriaController;
+use App\Http\Controllers\ApiProductoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::get('/productos', controller: App\Http\Controllers\ApiProductoController::class); esto funciona con php 8.0 en adelante
+
+// Route::get('/productos', [App\Http\Controllers\ApiProductoController::class, 'index']);
+
+Route::apiResource('productos', ApiProductoController::class);
+
+// ruta categorias
+Route::apiResource('categorias', ApiCategoriaController::class);
+
+
