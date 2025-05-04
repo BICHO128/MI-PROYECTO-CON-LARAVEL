@@ -41,3 +41,6 @@ Route::get('/categorias/{id}/edit', [CategoriaController::class, 'edit'])->name(
 Route::patch('/categorias/{id}', [CategoriaController::class, 'update'])->name('categorias.update');
 Route::delete('/categorias/{id}', [CategoriaController::class, 'destroy'])->name('categorias.destroy');
 
+Route::get('/test-secret', function () {
+    return env('JWT_SECRET');
+});
